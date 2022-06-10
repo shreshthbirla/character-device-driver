@@ -14,7 +14,17 @@ API used in programs are--
 
  cdev_add():- This function is used to register or adding the character driver with the kernel.It is defined in <linux/cdev.h>.
 
- cdev_del():- This function is used to unregister  the character driver from the kernel.It is defined in <linux/cdev.h>.
+ cdev_del():- This function is used to remove  the character device from the kernel.It is defined in <linux/cdev.h>.
+ 
+ class_create():- This function is needed for the device to allow a device node in /dev to be automatically created.
+ 
+ class_destroy():- This function is used to destroy the device class from /dev.
+ 
+ device_create():- This function used to create the device file or device node in /dev directory.
+ 
+ device_destroy():- This function used to destroy or remove the device file or device node in the /dev directory.
+ 
+ unregister_chrdev_region():- This function will unregister the device file from /dev directory.
  
  copy_to_user():- It copies specific data from the kernel buffer to the buffer allocated in the user space. It is defined in <linux/uaccess.h> 
  
@@ -31,6 +41,8 @@ API used in programs are--
  kmalloc():- used to allocate the memory in kernel space.
  
  kfree():- used to free the previously allocated memory in kernel space.
+ 
+ module_init() & module_exit():- are the calling functions, which will call their respective functions.
  
  
  
